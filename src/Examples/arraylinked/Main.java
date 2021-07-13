@@ -63,7 +63,7 @@ public class Main {
         long endTime = System.nanoTime();
         long duration = endTime - startTime;
         System.out.println("\n--------------------------------");
-        System.out.println("ArrayList add: "+duration);
+        System.out.println("Método add -- ArrayList: "+duration);
 
         //LinkedList método add()
         long startTime1 = System.nanoTime();
@@ -73,7 +73,8 @@ public class Main {
         }
         long endTime1 = System.nanoTime();
         long duration1 = endTime1 - startTime1;
-        System.out.println("LinkedList add: "+duration1);
+        System.out.println("Método add -- LinkedList: "+duration1);
+
 
 
         //ArrayList método set()
@@ -85,7 +86,7 @@ public class Main {
         long endTime3 = System.nanoTime();
         long duration3 = endTime3 - startTime2;
         System.out.println("--------------------------------");
-        System.out.println("ArrayList set: "+duration3);
+        System.out.println("Método set -- ArrayList: "+duration3);
 
         //LinkedLIst método set()
         long startTime4 = System.nanoTime();
@@ -95,7 +96,8 @@ public class Main {
         linkedList2.set(5000,50);
         long endTime4 = System.nanoTime();
         long duration4 = endTime4 - startTime4;
-        System.out.println("LinkedList set: "+duration4);
+        System.out.println("Método set -- LinkedList: "+duration4);
+
 
 
         for (int i = 0; i < 10000000; i++) {
@@ -104,28 +106,28 @@ public class Main {
         }
 
         //LinkedList método remove first
-        final long start5 = System.nanoTime();
-        linkedList3.remove(1);
+        final long start5= System.nanoTime();
+        linkedList3.remove(0);
         final long end5 = System.nanoTime();
 
         //ArrayList método remove first
         final long start6 = System.nanoTime();
-        arrayList3.remove(1);
+        arrayList3.remove(0);
         final long end6 = System.nanoTime();
 
-        long totalTimeLL = end6 - start6;
-        long totalTimeAL = end6 - start6;
+        long totalTimeLL3 = end5 - start5;
+        long totalTimeAL3 = end6 - start6;
 
 
         System.out.println("--------------------------------");
-        System.out.println("Método remove first position ArrayList: "+totalTimeAL);
-        System.out.println("Método remove first position LinkedList: "+totalTimeLL);
+        System.out.println("Método remove in first position -- ArrayList: "+totalTimeAL3);
+        System.out.println("Método remove in first position -- LinkedList: "+totalTimeLL3);
         System.out.println("--------------------------------");
-        System.out.println("Método get LinkedList: "+ totalTimeLL1);
-        System.out.println("Método get ArrayList: "+ totalTimeAL1);
+        System.out.println("Método get -- LinkedList: "+ totalTimeLL1);
+        System.out.println("Método get -- ArrayList: "+ totalTimeAL1);
         System.out.println("--------------------------------");
-        System.out.println("Método remove LinkedList: "+ totalTimeLL2);
-        System.out.println("Método remove ArrayList: "+ totalTimeAL2);
+        System.out.println("Método remove -- LinkedList: "+ totalTimeLL2);
+        System.out.println("Método remove -- ArrayList: "+ totalTimeAL2);
         System.out.println("--------------------------------");
     }
 }
