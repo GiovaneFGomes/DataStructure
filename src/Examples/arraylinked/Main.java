@@ -57,23 +57,24 @@ public class Main {
         //ArrayList método add()
         long startTime = System.nanoTime();
 
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100000; i++) {
             arrayList1.add(i);
         }
         long endTime = System.nanoTime();
         long duration = endTime - startTime;
         System.out.println("\n--------------------------------");
-        System.out.println("Método add -- ArrayList: "+duration);
+        System.out.println("Método add -- ArrayList: " + duration);
 
         //LinkedList método add()
-        long startTime1 = System.nanoTime();
 
-        for (int i = 0; i < 10000; i++) {
-            linkedList1.add(i);
+        startTime = System.nanoTime();
+
+        for (int i = 0; i < 100000; i++) {
+            linkedList.add(i);
         }
-        long endTime1 = System.nanoTime();
-        long duration1 = endTime1 - startTime1;
-        System.out.println("Método add -- LinkedList: "+duration1);
+        endTime = System.nanoTime();
+        duration = endTime - startTime;
+        System.out.println("Método add -- LinkedList: " + duration);
 
 
 
