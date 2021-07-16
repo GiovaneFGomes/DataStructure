@@ -1,4 +1,4 @@
-package Examples.arraylinked;
+package Examples.list;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -70,7 +70,7 @@ public class Main {
         startTime = System.nanoTime();
 
         for (int i = 0; i < 100000; i++) {
-            linkedList.add(i);
+            linkedList1.add(i);
         }
         endTime = System.nanoTime();
         duration = endTime - startTime;
