@@ -19,8 +19,7 @@ public class Main {
         LinkedList<Integer> linkedList3 = new LinkedList<>();
 
 
-
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 1000000; i++) {
             linkedList.add(i);
             arrayList.add(i);
         }
@@ -38,20 +37,18 @@ public class Main {
         long totalTimeAL1 = end2 - start2;
 
 
-
         //LinkedList método remove()
-        final long start3= System.nanoTime();
-        linkedList.remove(5000);
+        final long start3 = System.nanoTime();
+        linkedList.remove(50000);
         final long end3 = System.nanoTime();
 
         //ArrayList método remove()
         final long start4 = System.nanoTime();
-        arrayList.remove(5000);
-        final long end4= System.nanoTime();
+        arrayList.remove(50000);
+        final long end4 = System.nanoTime();
 
         long totalTimeLL2 = end3 - start3;
         long totalTimeAL2 = end4 - start4;
-
 
 
         //ArrayList método add()
@@ -77,7 +74,6 @@ public class Main {
         System.out.println("Método add -- LinkedList: " + duration);
 
 
-
         //ArrayList método set()
         long startTime2 = System.nanoTime();
         for (int i = 0; i < 10000; i++) {
@@ -87,18 +83,17 @@ public class Main {
         long endTime3 = System.nanoTime();
         long duration3 = endTime3 - startTime2;
         System.out.println("--------------------------------");
-        System.out.println("Método set -- ArrayList: "+duration3);
+        System.out.println("Método set -- ArrayList: " + duration3);
 
         //LinkedLIst método set()
         long startTime4 = System.nanoTime();
         for (int i = 0; i < 10000; i++) {
             linkedList2.add(i);
         }
-        linkedList2.set(5000,50);
+        linkedList2.set(5000, 50);
         long endTime4 = System.nanoTime();
         long duration4 = endTime4 - startTime4;
-        System.out.println("Método set -- LinkedList: "+duration4);
-
+        System.out.println("Método set -- LinkedList: " + duration4);
 
 
         for (int i = 0; i < 10000000; i++) {
@@ -107,7 +102,7 @@ public class Main {
         }
 
         //LinkedList método remove first
-        final long start5= System.nanoTime();
+        final long start5 = System.nanoTime();
         linkedList3.remove(0);
         final long end5 = System.nanoTime();
 
@@ -121,14 +116,15 @@ public class Main {
 
 
         System.out.println("--------------------------------");
-        System.out.println("Método remove in first position -- ArrayList: "+totalTimeAL3);
-        System.out.println("Método remove in first position -- LinkedList: "+totalTimeLL3);
+        System.out.println("Método remove in first position -- ArrayList: " + totalTimeAL3);
+        System.out.println("Método remove in first position -- LinkedList: " + totalTimeLL3);
         System.out.println("--------------------------------");
-        System.out.println("Método get -- LinkedList: "+ totalTimeLL1);
-        System.out.println("Método get -- ArrayList: "+ totalTimeAL1);
+        System.out.println("Método get -- LinkedList: " + totalTimeLL1);
+        System.out.println("Método get -- ArrayList: " + totalTimeAL1);
         System.out.println("--------------------------------");
-        System.out.println("Método remove -- LinkedList: "+ totalTimeLL2);
-        System.out.println("Método remove -- ArrayList: "+ totalTimeAL2);
+        System.out.println("Método remove -- LinkedList: " + totalTimeLL2);
+        System.out.println("Método remove -- ArrayList: " + totalTimeAL2);
         System.out.println("--------------------------------");
+
     }
 }
