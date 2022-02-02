@@ -1,11 +1,13 @@
-package Examples.interfaceFuncional.stream;
+package com.giovane.datastructure.stream;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
+
         List<Integer> lista = Arrays.asList(2,3,3,7,4,95,100,23,1);
 
         // Iteracao de lista = Java 5
@@ -15,8 +17,6 @@ public class Main {
 
         // Iteracao de lista utilizando lambda = Java 8
         lista.stream().forEach(e -> System.out.println(e));
-
-
 
         // Stream = fluxo de dados
         lista.stream()
@@ -30,8 +30,7 @@ public class Main {
 
                 // operacoes final
                 .forEach(System.out::println); // method reference
-
-
     }
+
 }
 

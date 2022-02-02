@@ -1,4 +1,4 @@
-package Examples.list;
+package com.giovane.datastructure.list;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -23,6 +23,7 @@ public class Main {
             linkedList.add(i);
             arrayList.add(i);
         }
+
         //LinkedList método get
         final long start1 = System.nanoTime();
         linkedList.get(100);
@@ -57,6 +58,7 @@ public class Main {
         for (int i = 0; i < 100000; i++) {
             arrayList1.add(i);
         }
+
         long endTime = System.nanoTime();
         long duration = endTime - startTime;
         System.out.println("\n--------------------------------");
@@ -127,4 +129,5 @@ public class Main {
         System.out.println("--------------------------------");
 
     }
+
 }

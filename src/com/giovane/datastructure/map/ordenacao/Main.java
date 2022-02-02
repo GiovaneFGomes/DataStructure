@@ -1,4 +1,4 @@
-package Examples.map.ordenacao;
+package com.giovane.datastructure.map.ordenacao;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -6,10 +6,10 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Main {
+
     public static void main(String[] args) {
 
         Map<Integer, String> hashMap = new HashMap<>();
-
         hashMap.put(1001, "Um");
         hashMap.put(1002, "Dois");
         hashMap.put(1003, "Três");
@@ -49,4 +49,5 @@ public class Main {
         System.out.println("TreeMap: " + treeMap.keySet());
 
     }
+
 }
